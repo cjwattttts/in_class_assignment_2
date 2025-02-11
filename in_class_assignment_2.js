@@ -14,3 +14,8 @@ function getProductsByCategory(products, category) {
 
 console.log(getProductsByCategory(products, "Electronics"));
 
+// TASK 2
+
+function applyDiscount(products, discountRate) {
+    return products.map()
+}
