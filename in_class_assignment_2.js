@@ -8,14 +8,24 @@ let products = [
     { name: "Desk Chair", price: 150, category: "Furniture" } // F
 ];
 
-function getProductsByCategory(products, category) {
-    return product_array.filter(product => product.category === category_name);
-}
+// function getProductsByCategory(products, category) {
+    // return product_array.filter(product => product.category === category_name);
+// }
 
-console.log(getProductsByCategory(products, "Electronics"));
+// console.log(getProductsByCategory(products, "Electronics"));
 
 // TASK 2
 
 function applyDiscount(products, discountRate) {
-    return products.map()
+    return products.map(product => ({
+        ...product,
+        price: product.price - (product.price * discountRate)
+        name: product.name.toUpperCase()
+    }
+
+    ))
 }
+
+console.log(applyDiscount(products, .1));
+console.log("*".repeat(20))
+console.log(products)
